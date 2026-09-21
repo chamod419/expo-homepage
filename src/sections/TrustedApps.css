@@ -1,0 +1,144 @@
+.trusted-apps {
+  --icon-size: 40px;
+  --icon-gap: 12px;
+  --scroll-duration: 30s;
+  --edge-fade: clamp(32px, 8vw, 96px);
+
+  width: min(808px, 100%);
+  margin-inline: auto;
+  padding: 0 20px 28px;
+}
+
+.trusted-apps__heading {
+  margin: 0 0 16px;
+
+  color: #75777d;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.025em;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.trusted-apps__viewport {
+  overflow: hidden;
+  padding-block: 12px 18px;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--edge-fade),
+    #000 calc(100% - var(--edge-fade)),
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--edge-fade),
+    #000 calc(100% - var(--edge-fade)),
+    transparent
+  );
+}
+
+.trusted-apps__track {
+  display: flex;
+  width: max-content;
+
+  animation:
+    trusted-apps-scroll
+    var(--scroll-duration)
+    linear
+    infinite;
+
+  will-change: transform;
+}
+
+.trusted-apps__group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--icon-gap);
+
+  /* Preserve the same spacing between repeated groups. */
+  padding-right: var(--icon-gap);
+}
+
+.trusted-apps__icon {
+  display: block;
+  flex: 0 0 var(--icon-size);
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+  max-width: none;
+
+  object-fit: cover;
+  border-radius: 12px;
+  background: #f4f4f6;
+
+  box-shadow:
+    0 2px 4px rgb(0 0 0 / 6%),
+    0 5px 10px rgb(0 0 0 / 10%);
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@keyframes trusted-apps-scroll {
+  from {
+    transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - 20px), 0, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  .trusted-apps {
+    padding-bottom: 24px;
+  }
+
+  .trusted-apps__heading {
+    max-width: 310px;
+    margin-inline: auto;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trusted-apps__viewport {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .trusted-apps__track {
+    width: 100%;
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .trusted-apps__group {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .trusted-apps__group + .trusted-apps__group {
+    display: none;
+  }
+}
