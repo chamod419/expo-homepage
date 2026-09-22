@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
 import TrustedApps from './sections/TrustedApps'
+import Workflow from './sections/WorkFlow'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <main id="main-content">
         <Hero />
         <TrustedApps />
+        <Workflow />
       </main>
     </>
   )
