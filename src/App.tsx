@@ -1,7 +1,8 @@
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
 import TrustedApps from './sections/TrustedApps'
-import Workflow from './sections/WorkFlow'
+import Workflow from './sections/Workflow'
+import DeveloperTools from './sections/DeveloperTools'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <TrustedApps />
         <Workflow />
+        <DeveloperTools />
       </main>
     </>
   )

@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useId, useRef, useState } from 'react'
-import WorkflowVisual from '../components/WorkFlowVisual'
-import type { WorkflowStage } from '../components/WorkFlowVisual'
+import WorkflowVisual from '../components/WorkflowVisual'
+import type { WorkflowStage } from '../components/WorkflowVisual'
 import './Workflow.css'
 
 const AUTOPLAY_MS = 6000
@@ -14,25 +14,25 @@ const steps: {
     id: 'develop',
     title: 'Develop',
     description:
-      'Turn an idea into a native app using Expo’s development tools. Preview changes on a phone and keep your team working from the same project.',
+      'Build beautiful apps anywhere powered by Expo’s CLI, Skills, and MCP. Test on your device with Expo Go, validate with Simulators, distribute with Launch or Builds.',
   },
   {
     id: 'test',
     title: 'Test',
     description:
-      'Check important user journeys on cloud devices. Run repeatable checks as your code changes, and catch problems before a release reaches your users.',
+      'Find what breaks before your users do. Cloud simulators and device infrastructure for your team and your agents. Workflows runs your test suites on every change, starting from ready-made templates.',
   },
   {
     id: 'deploy',
     title: 'Deploy',
     description:
-      'Deliver new versions to iOS, Android, and the web. Coordinate releases and send compatible updates without rebuilding the entire app.',
+      'Deploy to TestFlight and the app stores for native releases, Update for everything after, with channels and rollouts you control.',
   },
   {
     id: 'monitor',
     title: 'Monitor',
     description:
-      'Follow stability, performance, and release adoption after launch. Use production insights to decide what to improve next.',
+      'See how the app behaves in production. Observe surfaces crash information, performance metrics, and Update adoption, and Update ships the fix if something breaks.',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function Workflow() {
       setReducedMotion(event.matches)
 
       if (event.matches) {
-        setPlaying(false)
+        setPlaying(!reducedMotion)
       }
     }
 
@@ -153,7 +153,7 @@ export default function Workflow() {
       <div className="workflow__art">
         <WorkflowVisual
           active={steps[active].id}
-          running={inView && pageVisible && !reducedMotion}
+          running={running}
         />
       </div>
 

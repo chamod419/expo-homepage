@@ -1,0 +1,52 @@
+.sdk-metal-logo {
+  position: relative;
+  isolation: isolate;
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  pointer-events: none;
+}
+
+.sdk-metal-logo__fallback {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.sdk-metal-logo__shader {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.sdk-metal-logo__shader canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .sdk-metal-logo {
+    width: 192px;
+    height: 192px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sdk-metal-logo {
+    width: 224px;
+    height: 224px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .sdk-metal-logo {
+    width: 240px;
+    height: 240px;
+  }
+}
