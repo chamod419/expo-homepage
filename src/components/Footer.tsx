@@ -3,6 +3,7 @@ import xIcon from '../assets/footer/x.svg'
 import discordIcon from '../assets/footer/discord.svg'
 import blueskyIcon from '../assets/footer/bluesky.svg'
 import ThemeSelector from './ThemeSelector'
+import FooterLogo from './FooterLogo'
 import MonoIcon from './MonoIcon'
 import '../styles/expo-bottom.css'
 import './Footer.css'
@@ -68,9 +69,7 @@ export default function Footer() {
       <div className="expo-bottom__container">
         <nav className="site-footer__main" aria-label="Expo resources">
           <div className="site-footer__brand">
-            <a className="site-footer__logo" href="#main-content" aria-label="Back to main content">
-              <img src="https://static.expo.dev/static/images/exponential.svg" alt="" width="28" height="28" />
-            </a>
+            <FooterLogo />
             <div className="site-footer__newsletter">
               <div>
                 <p className="site-footer__eyebrow"><span aria-hidden="true" />Newsletter</p>
