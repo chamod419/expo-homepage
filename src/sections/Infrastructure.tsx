@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useTheme } from '../hooks/useTheme'
 import './Infrastructure.css'
 
 const ASSETS = 'https://static.expo.dev/static/home/2026/cloud'
@@ -39,7 +40,7 @@ const features: Feature[] = [
   },
   {
     id: 'update',
-    title: ['Get the latest to', 'every useer,instantly'],
+    title: ['Get the latest to', 'every user, instantly'],
     description:
       'Send fast over-the-air updates to get the latest fixes and improvements to your users fast with Update.',
     href: 'https://docs.expo.dev/eas-update/introduction/',
@@ -115,6 +116,8 @@ function Chevron() {
 }
 
 function FeatureIllustration({ feature }: { feature: Feature }) {
+  const { resolved } = useTheme()
+  const imageUrl = (file: string) => `${ASSETS}/${resolved === 'dark' ? file.replace('.webp', '-dark.webp') : file}`
   const rootRef = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
   const [loaded, setLoaded] = useState(false)
@@ -161,12 +164,12 @@ function FeatureIllustration({ feature }: { feature: Feature }) {
         {feature.mobileImage && (
           <source
             media="(max-width: 767px)"
-            srcSet={`${ASSETS}/${feature.mobileImage}`}
+            srcSet={imageUrl(feature.mobileImage)}
           />
         )}
 
         <img
-          src={`${ASSETS}/${feature.image}`}
+          src={imageUrl(feature.image)}
           alt=""
           width={feature.width}
           height={feature.height}

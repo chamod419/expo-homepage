@@ -1,7 +1,7 @@
 .infrastructure {
-  --infra-panel: #f9f9fb;
+  --infra-panel: var(--color-panel);
   padding: 16px 0 112px;
-  color: #202326;
+  color: var(--color-text);
 }
 
 .infrastructure__header {
@@ -57,10 +57,10 @@
   align-items: center;
   justify-content: center;
   padding: 0 24px;
-  border: 1px solid #000;
+  border: 1px solid var(--color-button);
   border-radius: 999px;
-  background: #000;
-  color: #fff;
+  background: var(--color-button);
+  color: var(--color-button-text);
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
@@ -70,7 +70,7 @@
 }
 
 .infrastructure__button:hover {
-  background: #292929;
+  background: var(--color-button-hover);
 }
 
 .infrastructure__button:active {
@@ -139,7 +139,7 @@
 .infra-card__copy p {
   max-width: 480px;
   margin: 0;
-  color: #62656b;
+  color: var(--color-muted);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.4;
@@ -150,7 +150,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: #087ac1;
+  color: var(--color-accent);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
@@ -226,7 +226,7 @@
   background: linear-gradient(
     to bottom,
     transparent,
-    rgb(249 249 251 / 72%) 58%,
+    color-mix(in srgb,var(--infra-panel) 72%,transparent) 58%,
     var(--infra-panel)
   );
 }

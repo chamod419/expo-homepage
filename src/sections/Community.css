@@ -11,20 +11,20 @@
 .community-stat .community-stat__people { display:flex; align-items:center; flex-shrink:0; }
 .community-stat__person { display:block; width:48px; height:48px; }
 .community-stat__person + .community-stat__person { margin-left:-14px; }
-.community-stat__person img { display:block; width:100%; height:100%; border-radius:50%; border:2px solid #fff; object-fit:cover; }
+.community-stat__person img { display:block; width:100%; height:100%; border-radius:50%; border:2px solid var(--color-background); object-fit:cover; }
 .community-heading { display:flex; flex-direction:column; align-items:center; gap:40px; text-align:center; }
 .community-heading__copy { display:flex; flex-direction:column; gap:16px; }
 .community-heading h2 { margin:0; font-size:48px; font-weight:600; line-height:1.1; letter-spacing:-2px; }
 .community-heading__copy p { margin:0; color:var(--expo-muted); font-size:16px; font-weight:500; line-height:1.6; }
 .community-heading__cta { display:flex; flex-direction:column; align-items:center; gap:8px; }
 .community-discord { display:inline-flex; align-items:center; justify-content:center; gap:8px; height:48px; padding:0 24px; border:1px solid transparent; border-radius:999px; background:var(--expo-panel); color:var(--expo-ink); text-decoration:none; font-size:16px; font-weight:500; line-height:1; transition:background-color 200ms ease, transform 150ms ease; }
-.community-discord img { display:block; width:24px; height:24px; }
+.community-discord__icon { color:var(--expo-muted); }
 .community-discord:active { transform:scale(.98); }
 .community-heading__members { margin:0; color:var(--expo-muted); font-size:12px; font-weight:500; line-height:1.4; }
-.community-wall { max-height:600px; margin-top:80px; overflow:hidden; -webkit-mask-image:linear-gradient(to bottom,#000 50%,transparent 100%); mask-image:linear-gradient(to bottom,#000 50%,transparent 100%); }
+.community-wall { max-height:600px; margin-top:80px; overflow:hidden; -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 100%); mask-image:linear-gradient(to bottom,#000 55%,transparent 100%); }
 .community-wall__columns { column-count:4; column-gap:16px; margin:0; padding:0; list-style:none; }
 .community-post-wrap { display:inline-block; width:100%; break-inside:avoid; padding-bottom:16px; vertical-align:top; }
-.community-post { display:flex; flex-direction:column; gap:24px; padding:32px; border:1px solid #e7e7eb; border-radius:12px; background:#fff; color:var(--expo-ink); text-decoration:none; transition:background-color 300ms ease-in-out,border-color 300ms ease-in-out; }
+.community-post { display:flex; flex-direction:column; gap:24px; min-height:var(--post-height,160px); padding:32px; border:1px solid var(--expo-border); border-radius:12px; background:var(--color-background); color:var(--expo-ink); text-decoration:none; transition:background-color 300ms ease-in-out,border-color 300ms ease-in-out; }
 .community-post__author { display:flex; align-items:center; gap:8px; min-width:0; }
 .community-post__avatar { flex-shrink:0; display:block; width:48px; height:48px; border-radius:50%; object-fit:cover; background:var(--expo-panel); }
 .community-post__identity { display:flex; flex-direction:column; min-width:0; }
@@ -37,7 +37,7 @@
 .community-wall:focus-within { max-height:none; -webkit-mask-image:none; mask-image:none; }
 .community .community-wall:focus-within [data-enter] { opacity:1; transform:none; filter:none; transition:none; }
 .community .community-post:focus-visible { outline-offset:-3px; }
-@media (hover:hover) { .community-discord:hover { background:#e7e7ec; } .community-post:hover { background:var(--expo-panel); border-color:#cdced6; } }
+@media (hover:hover) { .community-discord:hover { background:var(--color-hover); } .community-post:hover { background:var(--expo-panel); border-color:var(--color-border-strong); } }
 @media (max-width:1279px) { .community-wall__columns { column-count:3; } }
 @media (max-width:1023px) {
   .community-stat { font-size:48px; letter-spacing:-2px; }
@@ -60,7 +60,8 @@
   .community-heading h2 { font-size:30px; letter-spacing:-1px; }
   .community-heading__copy p { font-size:14px; line-height:1.4; }
   .community-discord { height:36px; padding-inline:16px; font-size:14px; }
-  .community-discord img { width:16px; height:16px; }
+  .community-discord__icon { width:16px!important; height:16px!important; }
   .community-wall { max-height:1120px; margin-top:48px; }
   .community-wall__columns { column-count:1; }
+  .community-post { min-height:160px; }
 }

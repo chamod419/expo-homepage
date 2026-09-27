@@ -54,21 +54,21 @@
 }
 
 .hero-button-primary {
-  background: #000000;
-  color: #ffffff;
+  background: var(--color-button);
+  color: var(--color-button-text);
 }
 
 .hero-button-primary:hover {
-  background: #303030;
+  background: var(--color-button-hover);
 }
 
 .hero-button-secondary {
-  background: #f0f0f2;
+  background: var(--color-element);
   color: var(--color-text);
 }
 
 .hero-button-secondary:hover {
-  background: #e7e7eb;
+  background: var(--color-hover);
 }
 
 .hero-button svg {
@@ -113,7 +113,7 @@
 }
 
 .hero-announcement:hover {
-  border-color: #cdd1d6;
+  border-color: var(--color-border-strong);
 }
 
 .hero-announcement > svg {
@@ -129,7 +129,7 @@
   padding: 4px 9px;
   border-radius: 999px;
 
-  background: #ffffff;
+  background: var(--color-background);
   color: var(--color-text);
   box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
 

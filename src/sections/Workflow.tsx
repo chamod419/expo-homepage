@@ -79,7 +79,7 @@ export default function Workflow() {
       setReducedMotion(event.matches)
 
       if (event.matches) {
-        setPlaying(!reducedMotion)
+        setPlaying(false)
       }
     }
 
@@ -181,7 +181,7 @@ export default function Workflow() {
               cx="12"
               cy="12"
               r="10"
-              stroke="#dedfe4"
+              stroke="var(--color-border-strong)"
               strokeWidth="2"
             />
 

@@ -131,10 +131,10 @@ export default function HeroAnimation() {
           cy="0"
           r="560"
         >
-          <stop offset="0" stopColor="#60646c" />
-          <stop offset="0.3" stopColor="#60646c" stopOpacity="0.9" />
-          <stop offset="0.7" stopColor="#60646c" stopOpacity="0.5" />
-          <stop offset="1" stopColor="#60646c" stopOpacity="0.12" />
+          <stop offset="0" stopColor="var(--hero-thread)" />
+          <stop offset="0.3" stopColor="var(--hero-thread)" stopOpacity="0.9" />
+          <stop offset="0.7" stopColor="var(--hero-thread)" stopOpacity="0.5" />
+          <stop offset="1" stopColor="var(--hero-thread)" stopOpacity="0.12" />
         </radialGradient>
 
         <pattern
@@ -143,7 +143,7 @@ export default function HeroAnimation() {
           height="10"
           patternUnits="userSpaceOnUse"
         >
-          <circle cx="5" cy="5" r="3.6" fill="#000000" />
+          <circle cx="5" cy="5" r="3.6" fill="var(--hero-mark)" />
         </pattern>
 
         <radialGradient
@@ -195,8 +195,8 @@ export default function HeroAnimation() {
       <g ref={plateRef} className="hero-logo-plate">
         <path
           d={platePath}
-          fill="#ffffff"
-          stroke="#e3e5e8"
+          fill="var(--hero-plate)"
+          stroke="var(--hero-border)"
           strokeWidth="1.5"
         />
 
@@ -204,7 +204,7 @@ export default function HeroAnimation() {
           ref={shadeRef}
           className="hero-logo-shade"
           d={platePath}
-          fill="#7e8794"
+          fill="var(--hero-shade)"
           mask={`url(#${id}-shade)`}
         />
 
@@ -218,7 +218,7 @@ export default function HeroAnimation() {
           <path
             className="hero-logo-solid"
             d={LOGO_PATH}
-            fill="#000000"
+            fill="var(--hero-mark)"
           />
         </g>
       </g>

@@ -2,6 +2,8 @@ import githubIcon from '../assets/footer/github.svg'
 import xIcon from '../assets/footer/x.svg'
 import discordIcon from '../assets/footer/discord.svg'
 import blueskyIcon from '../assets/footer/bluesky.svg'
+import ThemeSelector from './ThemeSelector'
+import MonoIcon from './MonoIcon'
 import '../styles/expo-bottom.css'
 import './Footer.css'
 
@@ -92,8 +94,9 @@ export default function Footer() {
           <p>Independent homepage recreation · Expo branding belongs to its owners.</p>
           <a className="site-footer__status" href="https://status.expo.dev" target="_blank" rel="noopener noreferrer">Service status <span aria-hidden="true">↗</span></a>
           <div className="site-footer__socials">
-            {socials.map(social => <a key={social.name} href={social.href} aria-label={`${social.name} (opens in a new tab)`} target="_blank" rel="noopener noreferrer"><img src={social.icon} alt="" width="20" height="20" /></a>)}
+            {socials.map(social => <a key={social.name} href={social.href} aria-label={`${social.name} (opens in a new tab)`} target="_blank" rel="noopener noreferrer"><MonoIcon src={social.icon} /></a>)}
           </div>
+          <ThemeSelector />
         </div>
       </div>
     </footer>

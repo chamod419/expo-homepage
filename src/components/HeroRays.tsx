@@ -337,7 +337,7 @@ export default function HeroRays({
         <path strokeWidth="1.2" strokeOpacity="0.19" />
       </g>
 
-      <g fill="#60646c" fillOpacity="0.65">
+      <g fill="var(--hero-thread)" fillOpacity="0.65">
         {rays.map((ray) => (
           <circle key={ray.id} r={ray.radius} />
         ))}

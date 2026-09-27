@@ -1,67 +1,97 @@
 :root {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family:'Expo Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-synthesis:none;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  color:var(--color-text);
+  background:var(--color-background);
+  color-scheme:light;
 
-  color: #202326;
-  background: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  --color-background: #ffffff;
-  --color-text: #202326;
-  --color-muted: #62656b;
-  --color-panel: #f8f8fa;
-  --color-border: #e9e9ec;
+  --color-background:#fff;
+  --color-text:#1c2024;
+  --color-muted:#60646c;
+  --color-panel:#f9f9fb;
+  --color-element:#f0f0f3;
+  --color-hover:#e8e8ec;
+  --color-border:#e0e1e6;
+  --color-border-strong:#cdced6;
+  --color-accent:#0072de;
+  --color-button:#000;
+  --color-button-text:#fff;
+  --color-button-hover:#292929;
+  --color-overlay:rgb(255 255 255 / 80%);
+  --color-glow-center:#fff;
+  --hero-thread:#60646c;
+  --hero-mark:#000;
+  --hero-plate:#fff;
+  --hero-border:#e3e5e8;
+  --hero-shade:#7e8794;
+  --art-ink:#1c2024;
+  --art-surface:#fff;
+  --art-subtle:#f9f9fb;
+  --art-panel:#f0f0f3;
+  --art-fill:#e8e8ec;
+  --art-shadow:#d9d9e0;
+  --art-edge:#b9bbc6;
+  --art-muted:#8b8d98;
+  --art-blue:#0d74ce;
+  --art-blue-bright:#0588f0;
+  --art-blue-soft:#8ec8f6;
+  --art-blue-pale:#c2e5ff;
+  --cta-background:#fff;
+  --cta-surface:radial-gradient(circle at 50% 48%,#fff 32%,#fcfcfd 48%,#f8f9fa 70%,#eff0f2 100%);
+  --cta-shadow:inset 0 2px 21px rgb(255 255 255 / 90%),inset 8px 8px 100px rgb(134 134 134 / 12%);
+  --cta-shade:rgb(134 134 134 / 12%);
+  --cta-shade-shadow:inset 8px 8px 168px rgb(134 134 134 / 28%);
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+:root[data-theme='dark'] {
+  color-scheme:dark;
+  --color-background:#111113;
+  --color-text:#edeef0;
+  --color-muted:#b0b4ba;
+  --color-panel:#18191b;
+  --color-element:#212225;
+  --color-hover:#272a2d;
+  --color-border:#2e3135;
+  --color-border-strong:#43484e;
+  --color-accent:#70b8ff;
+  --color-button:#fff;
+  --color-button-text:#111113;
+  --color-button-hover:#e8e8ec;
+  --color-overlay:rgb(33 34 37 / 85%);
+  --color-glow-center:#212225;
+  --hero-thread:#b0b4ba;
+  --hero-mark:#edeef0;
+  --hero-plate:#18191b;
+  --hero-border:#363a3f;
+  --hero-shade:#b0b4ba;
+  --art-ink:#b0b4ba;
+  --art-surface:#212225;
+  --art-subtle:#18191b;
+  --art-panel:#272a2d;
+  --art-fill:#2e3135;
+  --art-shadow:#363a3f;
+  --art-edge:#43484e;
+  --art-muted:#696e77;
+  --art-blue:#0d74ce;
+  --art-blue-bright:#52a9ff;
+  --art-blue-soft:#205d9e;
+  --art-blue-pale:#163455;
+  --cta-background: var(--color-background);
+  --cta-surface:radial-gradient(circle at 50% 48%,#050505 32%,#080809 48%,#111113 70%,#18191b 100%);
+  --cta-shadow:inset 0 2px 21px rgb(255 255 255 / 4%),inset 8px 8px 100px rgb(255 255 255 / 2%);
+  --cta-shade:rgb(0 0 0 / 30%);
+  --cta-shade-shadow:inset 8px 8px 168px rgb(0 0 0 / 50%);
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-}
-
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid #1683e7;
-  outline-offset: 5px;
-}
+*,*::before,*::after { box-sizing:border-box; }
+body { margin:0; min-width:320px; background:var(--color-background); }
+button,input,textarea,select { font:inherit; }
+button { cursor:pointer; }
+a { color:inherit; text-decoration:none; }
+img,svg { display:block; max-width:100%; }
+h1,h2,h3,p { margin:0; }
+button:focus-visible,a:focus-visible,select:focus-visible { outline:2px solid var(--color-accent); outline-offset:5px; }
+.mono-icon { display:inline-block; flex-shrink:0; background:currentColor; mask:var(--icon-url) center / contain no-repeat; -webkit-mask:var(--icon-url) center / contain no-repeat; }

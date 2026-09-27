@@ -12,7 +12,7 @@
 .trusted-apps__heading {
   margin: 0 0 16px;
 
-  color: #75777d;
+  color: var(--color-muted);
 
   font-family:
     ui-monospace,
@@ -85,7 +85,7 @@
 
   object-fit: cover;
   border-radius: 12px;
-  background: #f4f4f6;
+  background: var(--color-element);
 
   box-shadow:
     0 2px 4px rgb(0 0 0 / 6%),
