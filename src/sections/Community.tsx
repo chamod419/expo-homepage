@@ -56,7 +56,7 @@ export default function Community() {
           <div className="community-heading" data-reveal-group>
             <div className="community-heading__copy" data-enter="blur">
               <h2 id="community-heading">Expo is a community</h2>
-              <p>Developers around the world build with Expo.<br />Explore their experiences and meet the community.</p>
+              <p>80% of React Native developers choose Expo.<br />Hear what developers say about their experience.</p>
             </div>
             <div className="community-heading__cta" data-enter="blur" style={at(180)}>
               <a className="community-discord" href="https://chat.expo.dev/" target="_blank" rel="noopener noreferrer">

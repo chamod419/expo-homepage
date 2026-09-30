@@ -95,3 +95,36 @@ img,svg { display:block; max-width:100%; }
 h1,h2,h3,p { margin:0; }
 button:focus-visible,a:focus-visible,select:focus-visible { outline:2px solid var(--color-accent); outline-offset:5px; }
 .mono-icon { display:inline-block; flex-shrink:0; background:currentColor; mask:var(--icon-url) center / contain no-repeat; -webkit-mask:var(--icon-url) center / contain no-repeat; }
+
+
+
+/* Expo dark-mode artwork corrections */
+:root[data-theme='dark'] {
+  --color-background: #111113;
+  --color-panel: #18191b;
+  --color-element: #212225;
+  --color-text: #edeef0;
+  --color-muted: #b0b4ba;
+
+  /* Hero keeps a white tile and black logo */
+  --hero-plate: #ffffff;
+  --hero-mark: #000000;
+  --hero-border: #e0e1e6;
+  --hero-shade: #7e8794;
+  --hero-thread: #b0b4ba;
+
+  /* Workflow illustration palette */
+  --art-ink: #edeef0;
+  --art-surface: #111113;
+  --art-subtle: #18191b;
+  --art-panel: #212225;
+  --art-fill: #272a2d;
+  --art-shadow: #363a3f;
+  --art-edge: #5a6169;
+  --art-muted: #696e77;
+
+  --art-blue: #70b8ff;
+  --art-blue-bright: #3b9eff;
+  --art-blue-soft: #205d9e;
+  --art-blue-pale: #004074;
+}

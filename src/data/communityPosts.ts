@@ -15,7 +15,7 @@ export const communityPosts: CommunityPost[] = [
     name: 'Peter Piekarczyk', handle: '@peterpme',
     avatar: avatar('fc0fb70dcbb17181f7cae6deb47388a56f31dc45-400x400.jpg'),
     href: 'https://x.com/peterpme/status/1946019090679603318',
-    summary: 'Shares his enthusiasm for Expo.',
+    summary: 'Expo is amazing.',
   },
   {
     name: 'NicoDevs', handle: '@Nico_Devs',

@@ -16,6 +16,45 @@ const ARTWORK: Record<WorkflowStage, string> = {
   monitor: monitorSvg,
 }
 
+function applyWorkflowTheme(svg: string): string {
+  const colors: Record<string, string> = {
+    '#fff': 'var(--art-surface)',
+    '#ffffff': 'var(--art-surface)',
+    '#1c2024': 'var(--art-ink)',
+    '#f9f9fb': 'var(--art-subtle)',
+    '#f0f0f3': 'var(--art-panel)',
+    '#e8e8ec': 'var(--art-fill)',
+    '#d9d9e0': 'var(--art-shadow)',
+    '#b9bbc6': 'var(--art-edge)',
+    '#8b8d98': 'var(--art-muted)',
+    '#0d74ce': 'var(--art-blue)',
+    '#0588f0': 'var(--art-blue-bright)',
+    '#8ec8f6': 'var(--art-blue-soft)',
+    '#c2e5ff': 'var(--art-blue-pale)',
+  }
+
+  return svg.replace(
+    /\b(fill|stroke|stop-color)=["'](#[0-9a-fA-F]{3,8})["']/g,
+    (original: string, attribute: string, value: string) => {
+      const color = value.toLowerCase()
+
+      // Keep white line icons on blue shapes white.
+      if (
+        attribute === 'stroke' &&
+        (color === '#fff' || color === '#ffffff')
+      ) {
+        return original
+      }
+
+      const replacement = colors[color]
+
+      return replacement
+        ? `${attribute}="${replacement}"`
+        : original
+    },
+  )
+}
+
 // Keep gradient and clip-path IDs unique when this component is reused.
 function scopeSvgIds(svg: string, prefix: string) {
   return svg
@@ -40,7 +79,10 @@ export default function WorkflowVisual({
   const scenes = useMemo(
     () => STAGES.map(stage => ({
       stage,
-      markup: scopeSvgIds(ARTWORK[stage], `workflow-${instanceId}-${stage}`),
+      markup: scopeSvgIds(
+        applyWorkflowTheme(ARTWORK[stage]),
+        `workflow-${instanceId}-${stage}`,
+      ),
     })),
     [instanceId],
   )

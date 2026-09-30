@@ -635,3 +635,35 @@
     transition: none;
   }
 }
+
+:root[data-theme='dark'] .dev-ai__glow {
+  --color-glow-center: #ffffff;
+}
+
+.expo-github-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 16px 32px;
+  border-radius: 999px;
+
+  background: #000;
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.expo-github-button svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+.expo-github-button:focus-visible {
+  outline: 2px solid #0072de;
+  outline-offset: 4px;
+}

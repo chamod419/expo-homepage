@@ -28,7 +28,7 @@ function Hero() {
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-copy">
         <h1 id="hero-title" className="hero-title">
-          Build beautiful apps that keep getting better
+          Mobile AI infrastructure
         </h1>
 
         <div className="hero-actions">
@@ -69,9 +69,9 @@ function Hero() {
         </a>
 
         <p className="hero-description">
-          Build with Expo’s CLI and development tools.
-          Test your apps, automate releases, and learn
-          from every update.
+          Build with our CLI and dev tools. 
+          Test on simulators made for agents. 
+          Ship with the best CI/CD for mobile and learn from every release.
         </p>
       </div>
     </section>

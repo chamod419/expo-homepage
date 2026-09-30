@@ -10,11 +10,11 @@ import './Footer.css'
 
 const groups = [
   { title: 'Product', links: [
-    ['GitHub', 'https://github.com/expo/expo'],
-    ['Expo CLI', 'https://github.com/expo/expo/tree/main/packages/%40expo/cli'],
-    ['Expo Services', 'https://expo.dev/services'],
-    ['EAS CLI', 'https://github.com/expo/eas-cli'],
-    ['Expo Go', 'https://expo.dev/go'],
+    ['Star us on GitHub', 'https://github.com/expo/expo'],
+    ['Expo CLI on GitHub', 'https://github.com/expo/expo/tree/main/packages/%40expo/cli'],
+    ['Expo Services (EAS)', 'https://expo.dev/services'],
+    ['EAS CLI on GitHub', 'https://github.com/expo/eas-cli'],
+    ['Expo Go on GitHub', 'https://github.com/expo/expo/tree/main/packages/%40expo/go'],
     ['Expo Orbit', 'https://expo.dev/orbit'],
     ['Snack', 'https://snack.expo.dev'],
   ] },
@@ -46,12 +46,12 @@ const groups = [
     ['Careers', 'https://expo.dev/careers'],
   ] },
   { title: 'Legal', links: [
-    ['Terms', 'https://expo.dev/terms'],
-    ['Acceptable use', 'https://expo.dev/acceptable-use'],
-    ['Privacy', 'https://expo.dev/privacy'],
+    ['Terms of service', 'https://expo.dev/terms'],
+    ['Acceptable use policy', 'https://expo.dev/acceptable-use'],
+    ['Privacy policy', 'https://expo.dev/privacy'],
     ['Privacy explained', 'https://expo.dev/privacy-explained'],
-    ['Cookies', 'https://expo.dev/privacy/cookies'],
-    ['Security', 'https://expo.dev/security'],
+    ['Cookie policy', 'https://expo.dev/privacy/cookies'],
+    ['Security & compliance', 'https://expo.dev/security'],
     ['Enterprise trust', 'https://expo.dev/trust'],
     ['Community guidelines', 'https://expo.dev/community-guidelines'],
   ] },
@@ -73,9 +73,9 @@ export default function Footer() {
             <div className="site-footer__newsletter">
               <div>
                 <p className="site-footer__eyebrow"><span aria-hidden="true" />Newsletter</p>
-                <p className="site-footer__newsletter-copy">News from Expo</p>
+                <p className="site-footer__newsletter-copy">Stay in touch with all things Expo</p>
               </div>
-              <a className="site-footer__updates" href="https://expo.dev/blog" target="_blank" rel="noopener noreferrer">Read updates</a>
+              <a className="site-footer__updates" href="https://expo.dev/blog" target="_blank" rel="noopener noreferrer">Subscribe</a>
             </div>
           </div>
           <div className="site-footer__groups">
@@ -90,13 +90,55 @@ export default function Footer() {
           </div>
         </nav>
         <div className="site-footer__bottom">
-          <p>Independent homepage recreation · Expo branding belongs to its owners.</p>
-          <a className="site-footer__status" href="https://status.expo.dev" target="_blank" rel="noopener noreferrer">Service status <span aria-hidden="true">↗</span></a>
-          <div className="site-footer__socials">
-            {socials.map(social => <a key={social.name} href={social.href} aria-label={`${social.name} (opens in a new tab)`} target="_blank" rel="noopener noreferrer"><MonoIcon src={social.icon} /></a>)}
-          </div>
-          <ThemeSelector />
-        </div>
+  <div className="site-footer__legal">
+    <p className="site-footer__copyright">
+      © {new Date().getFullYear()} 650 Industries, Inc.
+    </p>
+
+    <a
+      className="site-footer__status"
+      href="https://status.expo.dev"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span className="site-footer__status-dot" aria-hidden="true" />
+      <span>All Systems Operational</span>
+      <span className="site-footer__external" aria-hidden="true">
+        ↗
+      </span>
+    </a>
+
+    <a
+      className="site-footer__privacy"
+      href="https://expo.dev/privacy"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span className="site-footer__privacy-icon" aria-hidden="true">
+        <span>✓</span>
+        <span>×</span>
+      </span>
+
+      <span>Your Privacy Choices</span>
+    </a>
+  </div>
+
+  <div className="site-footer__socials">
+    {socials.map((social) => (
+      <a
+        key={social.name}
+        href={social.href}
+        aria-label={`${social.name} (opens in a new tab)`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <MonoIcon src={social.icon} />
+      </a>
+    ))}
+  </div>
+
+  <ThemeSelector />
+</div>
       </div>
     </footer>
   )

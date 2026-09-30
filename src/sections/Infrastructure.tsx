@@ -67,7 +67,7 @@ const features: Feature[] = [
     id: 'launch',
     title: ['Launch anything', 'to the App Store'],
     description:
-      'Follow a guided release process that helps turn your project into an app people can download.',
+      'Launch makes it easy by guiding you through the technical stuff, so your app can be in real users hands. No config or prior knowledge needed.',
     href: 'https://expo.dev/services/launch',
     image: 'box-4.webp',
     width: 1308,
@@ -76,9 +76,9 @@ const features: Feature[] = [
   },
   {
     id: 'observe',
-    title: ['Understand your app', 'in production.'],
+    title: ['Built-in monitoring', 'and observability'],
     description:
-      'Explore performance and reliability signals to see what users experience and where your app needs attention.',
+      'Performance metrics for understanding how your app is performing for users in production.',
     href: 'https://expo.dev/services/eas-observe',
     image: 'box-5.webp',
     width: 1326,
@@ -88,9 +88,9 @@ const features: Feature[] = [
   },
   {
     id: 'workflows',
-    title: ['Build, test and ship', 'with less manual work.'],
+    title: ['Automate your builds,', 'tests, and releases'],
     description:
-      'Connect your build, testing and release steps into repeatable workflows that run automatically.',
+      'Build for the app stores, run tests, send updates, and more automatically with Workflows.',
     href: 'https://expo.dev/services/workflows',
     image: 'box-3.webp',
     mobileImage: 'box-3-mobile.webp',
